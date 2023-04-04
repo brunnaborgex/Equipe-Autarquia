@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<script src="script.js"></script>
+
+<head>
+  <title>Desafio 46</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Formulário de Recrutamento</h1>
+  </header>
+
+  <main>
+    <form>
+      <center>
+        <h5>As informações fornecidas neste formulário serão usadas exclusivamente para fins de recrutamento e seleção.
+          Todos os campos são obrigatórios, exceto onde indicado o contrário.
+        </h5>
+      </center>
+      <hr>
+      <h3>Dados pessoais</h3>
+      <br>
+      <label for="name">Nome completo:</label>
+      <input type="text" id="name" name="name" placeholder="Insira seu nome completo"oninput="validarNome()" pattern="[A-Za-zÀ-ú ]+" required>
+      
+      <label for="data"><br>Data de nascimento:</label> 
+      <input type="date" id="data" name="data" placeholder="Insira sua data de nascimento" required>
+  
+      <label for="name"><br>Gênero</label>
+      <input type="radio" name="genero" value="masculino" /> Masculino<br />
+      <input type="radio" name="genero" value="feminino" /> Feminino<br />
+      <input type="radio" name="genero" value="outro" required/> Não especificar<br />
+
+      <label for="nacionalidade"><br>Nacionalidade:</label>
+      <input type="text" id="nacionalidade" name="nacionalidade" placeholder="Insira sua nacionalidade" oninput="validarNacionalidade()" pattern="[A-Za-zÀ-ú ]+" required>
+
+      <label for="endereco"><br>Endereço:</label>
+      <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço" oninput="validarEndereco()" required>
+
+      <label for="cidade"><br>Cidade:</label>
+      <input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade" oninput="validarCidade()" pattern="[A-Za-zÀ-ú ]+" required>
+
+      <label for="estado"><br>Estado:</label>
+      <input type="text" id="estado" name="estado" placeholder="Insira seu Estado (UF)" oninput="validarEstado()" pattern="[A-Za-zÀ-ú ]+" required>
+
+      <label for="cep"><br>CEP (apenas números):</label>
+      <input type="text" id="cep" name="cep" placeholder="Insira seu CEP" oninput="validarCEP()" pattern="[0-9]+" required>
+
+      <label for="telefone"><br>Telefone (apenas números, sem espaços e não esqueça do DDD):</label>
+      <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone" oninput="validarCEP()" pattern="[0-9]+" required>
+      <br><br>
+      <hr>
+
+      <h3>Formação acadêmica</h3>
+      <label for="name">Curso:</label>
+      <input type="radio" name="curso" value="TecnicoEmInformática" /> Técnico em Informática<br />
+      <input type="radio" name="curso" value="TADS" required/> Técnologo em Análise e Desenvolvimento de Sistemasre<br />
+      <br>
+      <hr>
+
+      <h3>Experiências profissionais</h3>
+      <label>
+        <input type="radio" name="possess" value="no" checked onclick="showPossessDetails()"> Não possuo
+      </label>
+      <label>
+        <input type="radio" name="possess" value="yes" onclick="showPossessDetails()"required> Possuo
+      </label>
+      <div id="possess-details" style="display:none;">
+        <label for="possess-text"><br>Informe sua última ou atual empresa:<br>
+        </label>
+        <input type="text" id="possess-text" name="possess-text">
+        <label for="possess-text"><br>Informe o seu cargo:<br>
+        </label>
+        <input type="text" id="possess-text" name="possess-text">
+        <label for="possess-text"><br>Informe o seu período de Atuação (Mês/Ano – Mês/Ano):<br>
+        </label>
+        <input type="text" id="possess-text" name="possess-text">
+        </label>
+        <label for="possess-text"><br>Informe suas Principais Atividades e Responsabilidades:<br>
+        </label>
+        <input type="text" id="possess-text" name="possess-text">
+      </div>
+
+      <br />
+      <br>
+      <hr>
+
+      <h3>Habilidades Técnicas e Idiomas</h3>
+      <label for="tecnica"><br>Informe quais suas habilidades técnicas relevantes (softwares, ferramentas,
+        certificações):</label>
+      <br> <input type="text" id="tecnica" name="tecnica"
+        placeholder="Insira 3 de suas habilidades tecnicas importantes" oninput="validarHABILIDADE()" pattern="[A-Za-zÀ-ú ]+" required>
+      <br>
+
+      <label for="idioma"><br>Possui habilidades com idiomas?</label>
+      <label>
+        <input type="radio" name="possui" value="sim" onclick="showPossuiDetails()"> Possuo
+      </label>
+      <label>
+        <input type="radio" name="possui" value="nao" checked onclick="showPossuiDetails()"required> Não possuo
+      </label>
+      <div id="possui-details" style="display:none;">
+        <label for="possui-text"><br>Qual idioma:<br>
+        </label>
+        <input type="text" id="possui-text" name="possui-text">
+
+        <label for="proeficiencia"><br>Nivel de proeficiência:</label>
+        <input type="radio" name="proeficiencia" value="Basico" />Básico<br />
+        <input type="radio" name="proeficiencia" value="Intermediario" />Intermediário<br />
+        <input type="radio" name="proeficiencia" value="Avancado" />Avançado<br />
+        <input type="radio" name="proeficiencia" value="Fluente" />Fluente<br />
+
+      </div>
+      <br />
+      <br>
+      <hr>
+
+      <h3>Habilidades Comportamentais</h3>
+      <label for="tecnica2"><br>Liste três habilidades comportamentais que você considera serem suas principais
+        qualidades profissionais: </label>
+      <input type="text" id="tecnica2" name="tecnica2" placeholder="Insira as três habilidades comportamentais" oninput="validarHABILIDADEcomportamental()" pattern="[A-Za-zÀ-ú ]+" required>
+      <br />
+      <br>
+      <hr>
+
+      <h3>Informações adicionais</h3>
+      <label for="salario"><br>Pretensão salarial:</label>
+      <input type="text" id="salario" name="salario" placeholder="Insira sua pretensão salarial" oninput="validarSALARIO()" pattern="[0-9]+" required>
+      
+      <label for="disponibilidade"><br>Disponibilidade para início:</label>
+       <input type="date" id="disponibilidade" name="disponibilidade" placeholder="Insira sua disponibilidade para o início" required>
+      <br>
+      <br>
+
+      <button type="submit">Enviar</button>
+  <p id="mensagem"></p>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>Esta é uma criação exclusiva da equipe <b>Autarquia.</b></p>
+  </footer>
+</body>
+
+</html>
