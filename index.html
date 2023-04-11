@@ -23,7 +23,9 @@
       <h3>Dados pessoais</h3>
       <br>
       <label for="name">Nome completo:</label>
-      <input type="text" id="name" name="name" placeholder="Insira seu nome completo"oninput="validarNome()" pattern="[A-Za-zÀ-ú ]+" required>
+<input type="text" id="name" name="name" placeholder="Insira seu nome completo" oninput="validarNome()" required>
+
+      
       
       <label for="data"><br>Data de nascimento:</label> 
       <input type="date" id="data" name="data" placeholder="Insira sua data de nascimento" required>
@@ -33,23 +35,23 @@
       <input type="radio" name="genero" value="feminino" /> Feminino<br />
       <input type="radio" name="genero" value="outro" required/> Não especificar<br />
 
-      <label for="nacionalidade"><br>Nacionalidade:</label>
-      <input type="text" id="nacionalidade" name="nacionalidade" placeholder="Insira sua nacionalidade" oninput="validarNacionalidade()" pattern="[A-Za-zÀ-ú ]+" required>
+     <label for="nacionalidade"><br>Nacionalidade:</label>
+<input type="text" id="nacionalidade" name="nacionalidade" placeholder="Insira sua nacionalidade" oninput="validarNacionalidade()" required>
 
       <label for="endereco"><br>Endereço:</label>
       <input type="text" id="endereco" name="endereco" placeholder="Insira seu endereço" oninput="validarEndereco()" required>
 
       <label for="cidade"><br>Cidade:</label>
-      <input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade" oninput="validarCidade()" pattern="[A-Za-zÀ-ú ]+" required>
+<input type="text" id="cidade" name="cidade" placeholder="Insira sua cidade" oninput="validarCidade()" required>
 
       <label for="estado"><br>Estado:</label>
-      <input type="text" id="estado" name="estado" placeholder="Insira seu Estado (UF)" oninput="validarEstado()" pattern="[A-Za-zÀ-ú ]+" required>
+      <input type="text" id="estado" name="estado" placeholder="Insira seu estado" oninput="validarEstado()" required>
 
-      <label for="cep"><br>CEP (apenas números):</label>
-      <input type="text" id="cep" name="cep" placeholder="Insira seu CEP" oninput="validarCEP()" pattern="[0-9]+" required>
+<label for="cep"><br>CEP:</label>
+      <input type="text" id="cep" name="cep" placeholder="Insira seu cep" oninput="validarCep()" required>
 
-      <label for="telefone"><br>Telefone (apenas números, sem espaços e não esqueça do DDD):</label>
-      <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone" oninput="validarCEP()" pattern="[0-9]+" required>
+      <label for="telefone"><br>Telefone (apenas números com DD):</label>
+      <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone" oninput="validarTelefone()" required>
       <br><br>
       <hr>
 
@@ -90,8 +92,7 @@
       <h3>Habilidades Técnicas e Idiomas</h3>
       <label for="tecnica"><br>Informe quais suas habilidades técnicas relevantes (softwares, ferramentas,
         certificações):</label>
-      <br> <input type="text" id="tecnica" name="tecnica"
-        placeholder="Insira 3 de suas habilidades tecnicas importantes" oninput="validarHABILIDADE()" pattern="[A-Za-zÀ-ú ]+" required>
+      <br> <input type="text" id="tecnica" name="tecnica" placeholder="Insira suas habilidades técnicas relevantes" oninput="validarTecnica()" required>
       <br>
 
       <label for="idioma"><br>Possui habilidades com idiomas?</label>
@@ -120,14 +121,14 @@
       <h3>Habilidades Comportamentais</h3>
       <label for="tecnica2"><br>Liste três habilidades comportamentais que você considera serem suas principais
         qualidades profissionais: </label>
-      <input type="text" id="tecnica2" name="tecnica2" placeholder="Insira as três habilidades comportamentais" oninput="validarHABILIDADEcomportamental()" pattern="[A-Za-zÀ-ú ]+" required>
+      <input type="text" id="tecnica2" name="tecnica2" placeholder="Insira suas habilidades comportamentais" oninput="validarTecnica2()" required>
       <br />
       <br>
       <hr>
 
       <h3>Informações adicionais</h3>
       <label for="salario"><br>Pretensão salarial:</label>
-      <input type="text" id="salario" name="salario" placeholder="Insira sua pretensão salarial" oninput="validarSALARIO()" pattern="[0-9]+" required>
+      <input type="text" id="salario" name="salario" placeholder="Insira sua pretensão salarial" oninput="validarSalario()" required>
       
       <label for="disponibilidade"><br>Disponibilidade para início:</label>
        <input type="date" id="disponibilidade" name="disponibilidade" placeholder="Insira sua disponibilidade para o início" required>
@@ -144,5 +145,4 @@
     <p>Esta é uma criação exclusiva da equipe <b>Autarquia.</b></p>
   </footer>
 </body>
-
 </html>
